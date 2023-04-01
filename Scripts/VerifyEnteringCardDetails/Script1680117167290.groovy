@@ -60,13 +60,13 @@ WebUI.click(findTestObject('Object Repository/Page_Automation Exercise - All Pro
 
 WebUI.verifyElementVisible(findTestObject('Page_Automation Exercise - All Products/h2_Searched Products'))
 
-WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.ARROW_DOWN))
+//WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.ARROW_DOWN))
 
-WebUI.delay(1)
+//WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.ARROW_DOWN))
+//WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.ARROW_DOWN))
 
-WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.PAGE_DOWN))
+//WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.PAGE_DOWN))
 
 WebUI.mouseOver(findTestObject('Page_Automation Exercise - All Products/AddToCart'))
 
@@ -96,3 +96,4 @@ WebUI.sendKeys(findTestObject('Page_Automation Exercise - Payment/input_Expirati
 
 WebUI.sendKeys(findTestObject('Page_Automation Exercise - Payment/input_Expiration_expiry_year'), '1992')
 
+WebUI.closeBrowser()

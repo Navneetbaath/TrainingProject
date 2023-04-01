@@ -32,17 +32,16 @@ import org.openqa.selenium.interactions.Actions
 
 
 
-ChromeOptions options = new ChromeOptions()
+//ChromeOptions options = new ChromeOptions()
 
-Proxy proxy = new Proxy()
+//Proxy proxy = new Proxy()
 
-proxy.setProxyType(ProxyType.MANUAL)
+//proxy.setProxyType(ProxyType.MANUAL)
 
-proxy.setHttpProxy('http://pagead2.googlesyndication.com/:80')
 
-proxy.setSslProxy('http://googleleadservice.com/:443')
+//proxy.setSslProxy('http://googleleadservice.com/:443')
 
-RunConfiguration.setWebDriverPreferencesProperty('chromeOptions', options)
+//RunConfiguration.setWebDriverPreferencesProperty('chromeOptions', options)
 
 WebUI.openBrowser('')
 
@@ -74,4 +73,7 @@ Actions actions = new Actions(driver)
 
 // Move the mouse to the specified location
 actions.moveByOffset(100, 100).click().build().perform()
+
+
+WebUI.closeBrowser()
 

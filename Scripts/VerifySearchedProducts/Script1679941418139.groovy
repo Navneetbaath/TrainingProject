@@ -70,3 +70,4 @@ WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.PAGE_DOWN))
 
 WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.PAGE_DOWN))
 
+WebUI.closeBrowser()
