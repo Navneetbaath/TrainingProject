@@ -78,3 +78,4 @@ WebUI.mouseOver(findTestObject('Page_Automation Exercise - All Products/AddToCar
 
 WebUI.click(findTestObject('Page_Automation Exercise - All Products/a_Add to cart (1)'))
 
+WebUI.closeBrowser()

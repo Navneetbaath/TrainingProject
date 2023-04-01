@@ -103,3 +103,5 @@ WebUI.verifyElementText(findTestObject('Page_Automation Exercise - Order Placed/
 
 WebUI.click(findTestObject('Page_Automation Exercise - Order Placed/a_Download Invoice'))
 
+WebUI.closeBrowser()
+

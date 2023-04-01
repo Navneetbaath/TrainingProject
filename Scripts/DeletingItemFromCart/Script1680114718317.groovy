@@ -82,3 +82,6 @@ WebUI.click(findTestObject('Page_Automation Exercise - All Products/u_View Cart'
 
 WebUI.click(findTestObject('Page_Automation Exercise - Checkout/i_Pure Cotton V-Neck T-Shirt_fa fa-times'))
 
+WebUI.closeBrowser()
+
+

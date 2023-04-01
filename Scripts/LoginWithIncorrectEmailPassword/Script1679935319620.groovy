@@ -34,3 +34,4 @@ WebUI.click(findTestObject('Object Repository/Page_Automation Exercise - Signup 
 WebUI.verifyElementVisible(findTestObject('Page_Automation Exercise/p_Your email or password is incorrect'), 
     FailureHandling.STOP_ON_FAILURE)
 
+WebUI.closeBrowser()
