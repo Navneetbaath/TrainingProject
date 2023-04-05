@@ -24,6 +24,6 @@ Feature: Loginwithcorrectemail
   Scenario: Test login with corrcet email password
     Given I navigate to login page
     When I login with email address "Navneetbaath66@gmail.com" and password "Navneet@62"
-    Then I should arrive at my account page
+    Then I should arrive at products UI  search for TSHIRT add them to cart then delete the one and proceed to payment and invoice should be downloaded
 
     

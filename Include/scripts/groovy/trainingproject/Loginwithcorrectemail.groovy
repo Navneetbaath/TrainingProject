@@ -51,79 +51,79 @@ class Loginwithcorrectemail {
 	@Given("I navigate to login page")
 	def I_navigate_to_login_page() {
 		WebUI.openBrowser('')
-        WebUI.navigateToUrl('https://www.automationexercise.com/')
-        WebUI.click(findTestObject('Object Repository/Page_Automation Exercise - Signup  Login/SignupLogin_Link'))
+		WebUI.navigateToUrl('https://www.automationexercise.com/')
+		WebUI.click(findTestObject('Object Repository/Page_Automation Exercise - Signup  Login/SignupLogin_Link'))
 	}
 
 	@When('I login with email address "(.*)" and password "(.*)"')
 	def I_login_with_email_address_and_password (String emailaddress, String password) {
 		WebUI.setText(findTestObject('Object Repository/Page_Automation Exercise - Signup  Login/Login_Email'), emailaddress)
-        WebUI.setText(findTestObject('Object Repository/Page_Automation Exercise - Signup  Login/Login_Password'),password)
-        WebUI.click(findTestObject('Object Repository/Page_Automation Exercise - Signup  Login/Login_Button'))
+		WebUI.setText(findTestObject('Object Repository/Page_Automation Exercise - Signup  Login/Login_Password'),password)
+		WebUI.click(findTestObject('Object Repository/Page_Automation Exercise - Signup  Login/Login_Button'))
 	}
 
-	@Then("I should arrive at my account page")
+	@Then("I should arrive at products UI  search for TSHIRT add them to cart then delete the one and proceed to payment and invoice should be downloaded")
 	def I_should_arrive_at_my_account_page() {
 		WebUI.click(findTestObject('Object Repository/Page_Automation Exercise/a_Products'))
-		
+
 		WebUI.delay(2)
-		
+
 		// Obtain the current WebDriver instance
 		def driver = DriverFactory.getWebDriver()
-		
+
 		// Create an Actions object
 		Actions actions = new Actions(driver)
-		
+
 		// Move the mouse to the specified location
 		actions.moveByOffset(100, 100).click().build().perform()
-		
+
 		WebUI.setText(findTestObject('Object Repository/Page_Automation Exercise - All Products/input_Navneet Kaur_search'), 'tshirts')
-		
+
 		WebUI.click(findTestObject('Object Repository/Page_Automation Exercise - All Products/button_Navneet Kaur_submit_search'))
-		
+
 		WebUI.verifyElementVisible(findTestObject('Page_Automation Exercise - All Products/h2_Searched Products'))
-		
+
 		WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.ARROW_DOWN))
-		
+
 		WebUI.delay(1)
-		
+
 		WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.ARROW_DOWN))
-		
+
 		WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.PAGE_DOWN))
-		
+
 		WebUI.mouseOver(findTestObject('Page_Automation Exercise - All Products/AddToCart'))
-		
+
 		WebUI.click(findTestObject('Page_Automation Exercise - All Products/a_Add to cart'))
-		
+
 		WebUI.click(findTestObject('Page_Automation Exercise - All Products/button_Continue Shopping'))
-		
+
 		WebUI.mouseOver(findTestObject('Page_Automation Exercise - All Products/AddToCart2'))
-		
+
 		WebUI.click(findTestObject('Page_Automation Exercise - All Products/a_Add to cart (1)'))
-		
+
 		WebUI.click(findTestObject('Page_Automation Exercise - All Products/u_View Cart'))
-		
+
 		WebUI.click(findTestObject('Page_Automation Exercise - Checkout/i_Pure Cotton V-Neck T-Shirt_fa fa-times'))
-		
+
 		WebUI.click(findTestObject('Object Repository/Page_Automation Exercise - Checkout/a_Proceed To Checkout'))
-		
+
 		WebUI.click(findTestObject('Object Repository/Page_Automation Exercise - Checkout/a_Place Order'))
-		
+
 		WebUI.sendKeys(findTestObject('Page_Automation Exercise - Payment/input_Name on Card_name_on_card'), 'Navneet')
-		
+
 		WebUI.sendKeys(findTestObject('Page_Automation Exercise - Payment/input_Card Number_card_number'), '98989898')
-		
+
 		WebUI.sendKeys(findTestObject('Page_Automation Exercise - Payment/input_CVC_cvc'), '657')
-		
+
 		WebUI.sendKeys(findTestObject('Page_Automation Exercise - Payment/input_Expiration_expiry_month'), '67')
-		
+
 		WebUI.sendKeys(findTestObject('Page_Automation Exercise - Payment/input_Expiration_expiry_year'), '1992')
-		
+
 		WebUI.click(findTestObject('Page_Automation Exercise - Payment/button_Pay and Confirm Order'))
-		
+
 		WebUI.verifyElementText(findTestObject('Page_Automation Exercise - Order Placed/p_Congratulations Your order has been confirmed'),
-			'Congratulations! Your order has been confirmed!')
-		
+				'Congratulations! Your order has been confirmed!')
+
 		WebUI.click(findTestObject('Page_Automation Exercise - Order Placed/a_Download Invoice'))
 
 	}
